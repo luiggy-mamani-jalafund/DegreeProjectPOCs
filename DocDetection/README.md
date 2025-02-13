@@ -21,5 +21,4 @@ pip install -r requirements.txt
 
 ## Steps
 
-1. Recolectar los datos de entrenamiento
-   Para este POC se recolecto 
+1. [Click me to go to the training tutorial!](https://github.com/luiggy-mamani-jalafund/DegreeProjectPOCs/blob/main/DocDetection/data_trainer.ipynb)
