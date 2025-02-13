@@ -1,0 +1,25 @@
+# data/stories.yml
+version: "3.1"
+
+# stories:
+#   - story: happy path
+#     steps:
+#       - intent: greet
+#       - action: utter_greet
+#       - intent: schedule_appointment
+#       - action: action_activate_appointment_form
+#       - action: appointment_form
+#       - active_loop: appointment_form
+#       - active_loop: null
+#       - action: utter_submit
+#       - intent: goodbye
+#       - action: utter_goodbye
+
+#   - story: just schedule
+#     steps:
+#       - intent: schedule_appointment
+#       - action: action_activate_appointment_form
+#       - action: appointment_form
+#       - active_loop: appointment_form
+#       - active_loop: null
+#       - action: utter_submit

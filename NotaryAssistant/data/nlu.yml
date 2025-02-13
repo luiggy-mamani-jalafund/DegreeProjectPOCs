@@ -1,0 +1,64 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hola
+      - buenos días
+      - buenas tardes
+      - hey
+      - saludos
+
+  - intent: goodbye
+    examples: |
+      - adiós
+      - hasta luego
+      - chao
+      - nos vemos
+      - hasta pronto
+
+  - intent: schedule_appointment
+    examples: |
+      - quiero agendar una cita
+      - necesito una cita
+      - quisiera programar una cita
+      - quiero agendar el [lunes](day)
+      - quiero agendar para el [martes](day)
+      - necesito una cita el [miércoles](day)
+      - quiero una cita para el [jueves](day)
+      - necesito agendar el [viernes](day)
+      - quiero agendar el [lunes](day) a las [10:00](time)
+      - necesito una cita el [martes](day) a las [15:00](time)
+      - quisiera agendar el [miércoles](day) a las [11:00](time)
+      - quiero agendar para el [jueves](day) a las [14:00](time)
+      - necesito una cita para el [viernes](day) a las [16:00](time)
+
+  - intent: inform
+    examples: |
+      - el [lunes](day)
+      - el [martes](day)
+      - el [miércoles](day)
+      - el [jueves](day)
+      - el [viernes](day)
+      - el [lunes](day) a las [9:00](time)
+      - el [martes](day) a las [10:00](time)
+      - el [miércoles](day) a las [11:00](time)
+      - el [jueves](day) a las [14:00](time)
+      - el [viernes](day) a las [15:00](time)
+      - [lunes](day)
+      - [martes](day)
+      - [miércoles](day)
+      - [jueves](day)
+      - [viernes](day)
+      - a las [9:00](time)
+      - a las [10:00](time)
+      - a las [11:00](time)
+      - a las [14:00](time)
+      - a las [15:00](time)
+      - a las [16:00](time)
+      - [9:00](time)
+      - [10:00](time)
+      - [11:00](time)
+      - [14:00](time)
+      - [15:00](time)
+      - [16:00](time)

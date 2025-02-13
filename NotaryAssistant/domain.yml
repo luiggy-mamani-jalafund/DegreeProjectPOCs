@@ -1,0 +1,54 @@
+version: "3.1"
+
+session_config:
+    session_expiration_time: 60
+    carry_over_slots_to_new_session: true
+
+intents:
+    - greet
+    - goodbye
+    - schedule_appointment
+    - inform
+
+entities:
+    - day
+    - time
+
+slots:
+    day:
+        type: text
+        influence_conversation: true
+        mappings:
+            - type: from_entity
+              entity: day
+    time:
+        type: text
+        influence_conversation: true
+        mappings:
+            - type: from_entity
+              entity: time
+
+forms:
+    appointment_form:
+        required_slots:
+            - day
+            - time
+
+responses:
+    utter_greet:
+        - text: "¡Hola! ¿En qué puedo ayudarte?"
+
+    utter_goodbye:
+        - text: "¡Hasta luego!"
+
+    utter_ask_appointment_form_day:
+        - text: "¿Qué día te gustaría agendar tu cita?"
+
+    utter_ask_appointment_form_time:
+        - text: "¿A qué hora te gustaría tu cita?"
+
+actions:
+    - utter_greet
+    - utter_goodbye
+    - action_submmit_form
+    - validate_appointment_form

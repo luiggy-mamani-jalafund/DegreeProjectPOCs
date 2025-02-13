@@ -1,0 +1,28 @@
+version: "3.1"
+
+rules:
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Greating user anytime the user says hello
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Activate appointment form
+    steps:
+      - intent: schedule_appointment
+      - action: appointment_form
+      - active_loop: appointment_form
+
+  - rule: Submit appointment form
+    condition:
+      - active_loop: appointment_form
+    steps:
+      - action: appointment_form
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      - action: action_submmit_form
